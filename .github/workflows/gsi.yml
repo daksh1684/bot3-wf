@@ -49,7 +49,7 @@ jobs:
              touch config.prop
              echo "#Bo³+t config file" >> "config.prop"
              echo "#Tue Oct 18 08:08:12 KSA 2021" >> "config.prop"
-             echo "bot-username=nibbagsibot" >> "config.prop"
+             echo "bot-username=testgsiforbot" >> "config.prop"
              echo "bot-token=${{ secrets.BOTKEY }}" >> "config.prop"
              echo "bot-master=285384888" >> "config.prop"
              touch sf-creds.config
