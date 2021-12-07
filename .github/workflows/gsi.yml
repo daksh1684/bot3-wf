@@ -22,7 +22,7 @@ jobs:
          timeout-minutes: 100
          run: |
               sudo -E apt-get -qq update
-              sudo -E apt-get -qq install bc build-essential zip curl libstdc++6 git wget python gcc clang libssl-dev rsync flex bison ccache openjdk-8-jdk expect aria2
+              sudo -E apt-get -qq install bc build-essential zip curl libstdc++6 git wget python gcc clang libssl-dev rsync flex bison ccache openjdk-8-jdk expect neofetch tmux tmate aria2
               git config --global user.name "spiderdev123"
               git config --global user.email "spidermanm7@hotmail.com"
               git clone --recurse-submodules https://github.com/spiderdev123/ErfanGSIs.git
@@ -49,7 +49,7 @@ jobs:
              touch config.prop
              echo "#Bo³+t config file" >> "config.prop"
              echo "#Tue Oct 18 08:08:12 KSA 2021" >> "config.prop"
-             echo "bot-username=testgsiforbot" >> "config.prop"
+             echo "bot-username=nibbagsibot" >> "config.prop"
              echo "bot-token=${{ secrets.BOTKEY }}" >> "config.prop"
              echo "bot-master=285384888" >> "config.prop"
              touch sf-creds.config
