@@ -49,9 +49,9 @@ jobs:
              touch config.prop
              echo "#Bo³+t config file" >> "config.prop"
              echo "#Tue Oct 18 08:08:12 KSA 2021" >> "config.prop"
-             echo "bot-username=bobogsibot" >> "config.prop"
+             echo "bot-username=nibbagsibot" >> "config.prop"
              echo "bot-token=${{ secrets.BOTKEY }}" >> "config.prop"
-             echo "bot-master=5063902419" >> "config.prop"
+             echo "bot-master=285384888" >> "config.prop"
              touch sf-creds.config
              echo "#Config file" >> "sf-creds.config"
              echo "#Tue Oct 18 08:08:12 KSA 2021" >> "sf-creds.config"
