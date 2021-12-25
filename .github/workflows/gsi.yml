@@ -11,13 +11,13 @@ jobs:
     timeout-minutes: 505600
 
     steps:
-       - name: Checkouts
+       - name: Initial setup
          uses: actions/checkout@master
      # Cleanup The Actions Workspace Using Custom Composite Run Actions
      #  - uses: rokibhasansagar/slimhub_actions@main
 
          
-       - name: Initializing environment
+       - name: Setup env
          continue-on-error: true
          timeout-minutes: 100
          run: |
@@ -28,7 +28,7 @@ jobs:
               git clone --recurse-submodules https://github.com/spiderdev123/ErfanGSIs.git
               curl -sL https://git.io/file-transfer | sh
      
-       - name: Setup Erfan Tools
+       - name: Setup Erfan-Tools
          continue-on-error: true
          timeout-minutes: 10
          run: |
@@ -38,9 +38,9 @@ jobs:
          continue-on-error: true
          timeout-minutes: 3
          run: |
-              java -jar Bobo.jar
+              java -jar GSI_Builder.jar
          
-       - name: Add values
+       - name: Setup values
          continue-on-error: true
          timeout-minutes: 1
          run: |
@@ -58,12 +58,12 @@ jobs:
              echo "bot-sf-user=nippon" >> "sf-creds.prop"
              echo "bot-send-announcement=true" >> "sf-creds.prop"
              echo "bot-sf-proj=nippongsi" >> "sf-creds.prop"
-             echo "bot-announcement-id=-1001201220736" >> "sf-creds.prop"
+             echo "bot-announcement-id=-1001446520361" >> "sf-creds.prop"
              echo "bot-sf-pass=${{ secrets.SFPASS }}" >> "sf-creds.prop"
              echo "bot-sf-host=frs.sourceforge.net" >> "sf-creds.prop"
-       - name: Run Bot
+       - name: Start BOT
          continue-on-error: true
          timeout-minutes: 310
          run: |
               sudo chmod -R 0777 *
-              sudo java -jar Bobo.jar
+              sudo java -jar GSI_Builder.jar
