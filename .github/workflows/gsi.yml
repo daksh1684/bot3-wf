@@ -34,7 +34,7 @@ jobs:
          run: |
               sudo chmod -R 0777 ErfanGSIs
               sudo bash ErfanGSIs/setup.sh
-       - name: Generate config.prop
+       - name: Generate configs.prop
          continue-on-error: true
          timeout-minutes: 3
          run: |
@@ -44,21 +44,21 @@ jobs:
          continue-on-error: true
          timeout-minutes: 1
          run: |
-             rm -rf configs/config.prop && rm -rf configs/sf-creds.config
+             rm -rf configs/configs.prop && rm -rf configs/sf-creds.config
              cd configs
-             touch config.prop
-             echo "#Bo³+t config file" >> "config.prop"
-             echo "#Tue Oct 18 08:08:12 KSA 2021" >> "config.prop"
-             echo "bot-username=nibbagsibot" >> "config.prop"
-             echo "bot-token=${{ secrets.BOTKEY }}" >> "config.prop"
-             echo "bot-master=285384888" >> "config.prop"
+             touch configs.prop
+             echo "#Bo³+t config file" >> "configs.prop"
+             echo "#Tue Oct 18 08:08:12 KSA 2021" >> "configs.prop"
+             echo "bot-username=nibbagsibot" >> "configs.prop"
+             echo "bot-token=${{ secrets.BOTKEY }}" >> "configs.prop"
+             echo "bot-master=285384888" >> "configs.prop"
              touch sf-creds.config
              echo "#Config file" >> "sf-creds.config"
              echo "#Tue Oct 18 08:08:12 KSA 2021" >> "sf-creds.config"
              echo "bot-sf-user=nippon" >> "sf-creds.config"
              echo "bot-send-announcement=true" >> "sf-creds.config"
              echo "bot-sf-proj=nippongsi" >> "sf-creds.config"
-             echo "bot-announcement-id=-1001446520361" >> "sf-creds.config"
+             echo "bot-announcement-id=-1001201220736" >> "sf-creds.config"
              echo "bot-sf-pass=${{ secrets.SFPASS }}" >> "sf-creds.config"
              echo "bot-sf-host=frs.sourceforge.net" >> "sf-creds.config"
        - name: Run Bot
@@ -67,3 +67,4 @@ jobs:
          run: |
               sudo chmod -R 0777 *
               sudo java -jar Bobo.jar
+
